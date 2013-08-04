@@ -6,66 +6,57 @@ main()
 {
 
 	printf("M spotting F:");
-  int msf = GetInt();
+  float msf = GetFloat();
   printf("F spotting M:");
-  int fsm = GetInt();
+  float fsm = GetFloat();
   printf("F spotting F:");
-  int fsf = GetInt();
+  float fsf = GetFloat();
   printf("M spotting M:");
-  int msm = GetInt();
+  float msm = GetFloat();
 
-	int total = msf + fsm + fsf + msm;
+	float total = msf + fsm + fsf + msm;
 
-	printf("msf = %d\n", msf);
-	printf("fsm = %d\n", fsm);
-	printf("fsf = %d\n", fsf);
-	printf("msm = %d\n", msm);
-
-  printf("total : %d \n", total);
   printf("Who is spotting whom!\n");
 
-  msf = (msf/total)*80;
-	printf("msf = %d\n", msf);
+  float msf1 = (msf/total)*80;
+
   printf("M spotting F\n");
 
-
-	while ( msf > 0 )
+	while ( msf1 > 0 )
 	{
 		printf("#");
-		msf--;
+		msf1--;
 	}
 
-	fsm = (fsm/total)*80;
-	printf("fsm = %d\n", fsm);
+	float fsm1 = (fsm/total)*80;
 
-	printf("F spotting M\n");
+	printf("\nF spotting M\n");
 
-	while (fsm > 0 )
+	while (fsm1 > 0 )
 	{
 		printf("#");
-		fsm--;
+		fsm1--;
 	}
 
-  fsf = (fsf/total)*80;
-	printf("fsf = %d\n", fsf);
+  float fsf2 = (fsf/total)*80;
 
-  printf("F spotting F\n");
+  printf("\nF spotting F\n");
 
-  while (fsf > 0 )
+  while (fsf2 > 0 )
   {
     printf("#");
-    fsf--;
+    fsf2--;
   }
 
-  msm = (msm/total)*80;
-	printf("msm = %d\n", msm);
+  float msm2 = (msm/total)*80;
 
-  printf("M spotting M\n");
+  printf("\nM spotting M\n");
 
-  while (msm > 0 )
+  while (msm2 > 0 )
   {
     printf("#");
-    msm--;
+    msm2--;
   }
+  printf("\n");
 }
 
