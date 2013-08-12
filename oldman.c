@@ -87,7 +87,3 @@ printing(string a, string b)
     printf("\n");
     i++;
 }
-
-
-
-
