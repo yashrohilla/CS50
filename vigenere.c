@@ -19,12 +19,12 @@ main(int argc, char *argv[])
 
   string p = GetString();
 
-   for (int i = 0, j = 0; i < strlen(p), j < strlen(k); i++, j++)
+   for (int i = 0, j = 0; i < strlen(p), j <= strlen(k); i++, j++)
   {
     if ( j == strlen(k) )
     {
       j = 0;
-    }
+     }
 
     if(p[i] == ' ')
     {
@@ -64,4 +64,5 @@ main(int argc, char *argv[])
     }
   }
 printf("\n");
+return 0;
 }
