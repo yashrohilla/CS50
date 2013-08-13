@@ -10,6 +10,7 @@ main(int argc, char *argv[])
   string k = argv[1];
   int l;
   int q;
+  int x;
 
   if ( argc > 2 )
   {
@@ -19,49 +20,48 @@ main(int argc, char *argv[])
 
   string p = GetString();
 
-   for (int i = 0, j = 0; i < strlen(p), j <= strlen(k); i++, j++)
+   for (int i = 0, j = 0; i < strlen(p); i++)
   {
-    if ( j == strlen(k) )
-    {
-      j = 0;
-     }
 
-    if(p[i] == ' ')
-    {
-      printf(" ");
-    }
-    else
-    {
       q = (int)p[i];
       l = (int)k[j];
+
 
       if(l >= 65 && l <= 90)
         l = l - 65;
       else if(l >= 97 && l <= 122)
         l = l - 97;
+        x = l + q;
 
-       int x = l + q;
-       if(q >= 65 && q <= 90)
+       if((q >=65 && q <=90) && x > 90)
        {
+         x = x - 26;
          printf("%c", (char)x);
+         j++;
        }
-       else if(q >=97 && q <= 122)
+       else if(q >= 65 && q <= 90)
        {
          printf("%c", (char)x);
+         j++;
        }
        else if((q >= 97 && q <=122) && x > 122)
        {
          x = x - 26;
          printf("%c", (char)x);
+         j++;
        }
-       else if((q >=65 && q <=90) && x > 90)
+       else if(q >=97 && q <= 122)
        {
-         x = x - 26;
-         printf("c", (char)x);
+         printf("%c", (char)x);
+         j++;
        }
        else
+       {
          printf("%c", p[i]);
-    }
+       }
+
+       if ( j == strlen(k) )
+         j = 0;
   }
 printf("\n");
 return 0;
