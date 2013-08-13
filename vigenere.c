@@ -8,15 +8,28 @@ main(int argc, char *argv[])
 {
 
   string k = argv[1];
-  int l;
+  int j;
   int q;
   int x;
+  int l;
 
   if ( argc > 2 )
   {
     printf("Only one encryption key please.\n");
     return 1;
   }
+
+ for ( j = 0; j < strlen(k); j++ )
+ {
+   l = (int)k[j];
+   if(( l < 65 || l > 90 ) && ( l < 97 || l > 122 ))
+   {
+     printf("Please enter an alphabetic key \n");
+     return 1;
+   }
+ }
+  
+
 
   string p = GetString();
 
