@@ -161,7 +161,7 @@ main(int argc, char *argv[])
         // get user's input
         ch = getch();
 
-        add_num();
+   //     add_num();
 
         // capitalize input to simplify cases
         ch = toupper(ch);
@@ -222,53 +222,8 @@ void
 add_num(void)
 {
 
-    char ch = getch();
+ //   char ch = getch();
 
-    if(ch == 49)
-    {
-      mvaddch(g.top + g.y + 1 + g.y/3, g.left + 2 + 2*(g.x + g.x/3), '1');
-      refresh();
-    }
-    else if(ch == 50)
-    {
-      mvaddch(g.top + g.y + 1 + g.y/3, g.left + 2 + 2*(g.x + g.x/3), '2');
-      refresh();
-    }
-    else if(ch == 51)
-    {
-      mvaddch(g.top + g.y + 1 + g.y/3, g.left + 2 + 2*(g.x + g.x/3), '3');
-      refresh();
-    }
-    else if(ch == 52)
-    {
-      mvaddch(g.top + g.y + 1 + g.y/3, g.left + 2 + 2*(g.x + g.x/3), '4');
-      refresh();
-    }
-    else if(ch == 53)
-    {
-      mvaddch(g.top + g.y + 1 + g.y/3, g.left + 2 + 2*(g.x + g.x/3), '5');
-      refresh();
-    }
-    else if(ch == 54)
-    {
-      mvaddch(g.top + g.y + 1 + g.y/3, g.left + 2 + 2*(g.x + g.x/3), '6');
-      refresh();
-    }
-    else if(ch== 55)
-    {
-      mvaddch(g.top + g.y + 1 + g.y/3, g.left + 2 + 2*(g.x + g.x/3), '7');
-      refresh();
-    }
-    else if(ch == 56)
-    {
-      mvaddch(g.top + g.y + 1 + g.y/3, g.left + 2 + 2*(g.x + g.x/3), '8');
-      refresh();
-    }
-    else if(ch == 57)
-    {
-      mvaddch(g.top + g.y + 1 + g.y/3, g.left + 2 + 2*(g.x + g.x/3), '9');
-      refresh();
-    }
 
 }
 
@@ -553,6 +508,62 @@ move_cursor(void)
       show_cursor();
     }
 
+    // if(g.board[g.x][g.y] == 46)
+    {
+      //char ch = getch();
+    if(ch == 49)
+    {
+      mvaddch(g.top + g.y + 1 + g.y/3, g.left + 2 + 2*(g.x + g.x/3), '1');
+      refresh();
+    }
+    else if(ch == 50)
+    {
+      mvaddch(g.top + g.y + 1 + g.y/3, g.left + 2 + 2*(g.x + g.x/3), '2');
+      refresh();
+    }
+    else if(ch == 51)
+    {
+      mvaddch(g.top + g.y + 1 + g.y/3, g.left + 2 + 2*(g.x + g.x/3), '3');
+      refresh();
+    }
+    else if(ch == 52)
+    {
+      mvaddch(g.top + g.y + 1 + g.y/3, g.left + 2 + 2*(g.x + g.x/3), '4');
+      refresh();
+    }
+    else if(ch == 53)
+    {
+      mvaddch(g.top + g.y + 1 + g.y/3, g.left + 2 + 2*(g.x + g.x/3), '5');
+      refresh();
+    }
+    else if(ch == 54)
+    {
+      mvaddch(g.top + g.y + 1 + g.y/3, g.left + 2 + 2*(g.x + g.x/3), '6');
+      refresh();
+    }
+    else if(ch == 55)
+    {
+      mvaddch(g.top + g.y + 1 + g.y/3, g.left + 2 + 2*(g.x + g.x/3), '7');
+      refresh();
+    }
+    else if(ch == 56)
+    {
+      mvaddch(g.top + g.y + 1 + g.y/3, g.left + 2 + 2*(g.x + g.x/3), '8');
+      refresh();
+    }
+    else if(ch == 57)
+    {
+      mvaddch(g.top + g.y + 1 + g.y/3, g.left + 2 + 2*(g.x + g.x/3), '9');
+      refresh();
+    }
+    else if(ch == 46 || ch == 48)
+    {
+      mvaddch(g.top + g.y + 1 + g.y/3, g.left + 2 + 2*(g.x + g.x/3), '.');
+      refresh();
+    }
+    }
+
+
     if(g.x == -1) // If cursor hits left wall, then stop
     {
       g.x = 0;
@@ -577,7 +588,6 @@ move_cursor(void)
    }
 
 }
-
 
 /*
  * (Re)draws everything on the screen.
