@@ -186,7 +186,7 @@ draw(void)
 bool
 move(int tile)
 {
-  for(int i = 0; i < d; i++)
+ /* for(int i = 0; i < d; i++)
   {
     for(int j = 0; j < d; j++)
     {
@@ -204,7 +204,24 @@ move(int tile)
         return true;
       }
     }
+  } */
+
+  for(int i = 0; i < d; i++)
+  {
+    for(int j = 0; j < d; j++)
+    {
+      if (board[i][j] == tile)
+      {
+        printf("%d\n", board[i][j+1]);
+      }
+    }
   }
+
+
+
+
+
+
 return false;
 }
 
@@ -223,12 +240,12 @@ won(void)
     {
       for(int j = 0; j < d; j++)
       {
-        if(board[i][j] == d*d - x)
+        if(board[i][j] ==  x)
           temp++;
         x++;
       }
     }
-    if (temp == 15)
+    if (temp == 16)
       return true;
     else
       return false;
