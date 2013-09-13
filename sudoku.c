@@ -62,6 +62,7 @@ void show_cursor(void);
 void shutdown(void);
 bool startup(void);
 void move_cursor(void);
+void check_won(void);
 void add_num(void);
 
 /*
@@ -219,13 +220,16 @@ main(int argc, char *argv[])
  */
 
 void
-add_num(void)
+check_won(void)
 {
-
- //   char ch = getch();
-
+  int i = 1;
+  while(g.x != g.x + i)
+    if(g.x != g.x + i)
+      i++;
+  mvaddch(g.top - 5, g.left, i);
 
 }
+
 
 /*
  * Draw's the game's board.
@@ -513,51 +517,61 @@ move_cursor(void)
       //char ch = getch();
     if(ch == 49)
     {
+      if(g.board[g.y][g.x] == 0)
       mvaddch(g.top + g.y + 1 + g.y/3, g.left + 2 + 2*(g.x + g.x/3), '1');
       refresh();
     }
     else if(ch == 50)
     {
+      if(g.board[g.y][g.x] == 0)
       mvaddch(g.top + g.y + 1 + g.y/3, g.left + 2 + 2*(g.x + g.x/3), '2');
       refresh();
     }
     else if(ch == 51)
     {
+      if(g.board[g.y][g.x] == 0)
       mvaddch(g.top + g.y + 1 + g.y/3, g.left + 2 + 2*(g.x + g.x/3), '3');
       refresh();
     }
     else if(ch == 52)
     {
+      if(g.board[g.y][g.x] == 0)
       mvaddch(g.top + g.y + 1 + g.y/3, g.left + 2 + 2*(g.x + g.x/3), '4');
       refresh();
     }
     else if(ch == 53)
     {
+      if(g.board[g.y][g.x] == 0)
       mvaddch(g.top + g.y + 1 + g.y/3, g.left + 2 + 2*(g.x + g.x/3), '5');
       refresh();
     }
     else if(ch == 54)
     {
+      if(g.board[g.y][g.x] == 0)
       mvaddch(g.top + g.y + 1 + g.y/3, g.left + 2 + 2*(g.x + g.x/3), '6');
       refresh();
     }
     else if(ch == 55)
     {
+      if(g.board[g.y][g.x] == 0)
       mvaddch(g.top + g.y + 1 + g.y/3, g.left + 2 + 2*(g.x + g.x/3), '7');
       refresh();
     }
     else if(ch == 56)
     {
+      if(g.board[g.y][g.x] == 0)
       mvaddch(g.top + g.y + 1 + g.y/3, g.left + 2 + 2*(g.x + g.x/3), '8');
       refresh();
     }
     else if(ch == 57)
     {
+      if(g.board[g.y][g.x] == 0)
       mvaddch(g.top + g.y + 1 + g.y/3, g.left + 2 + 2*(g.x + g.x/3), '9');
       refresh();
     }
     else if(ch == 46 || ch == 48)
     {
+      if(g.board[g.y][g.x] == 0)
       mvaddch(g.top + g.y + 1 + g.y/3, g.left + 2 + 2*(g.x + g.x/3), '.');
       refresh();
     }
@@ -587,6 +601,8 @@ move_cursor(void)
 
    }
 
+    check_won();
+
 }
 
 /*
@@ -608,7 +624,7 @@ redraw_all(void)
     draw_grid();
     draw_logo();
     draw_numbers();
-    add_num();
+    //add_num();
 
     // show cursor
     show_cursor();
