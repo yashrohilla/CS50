@@ -24,7 +24,7 @@ main(int argc, char *argv[])
    l = (int)k[j];
    if(( l < 65 || l > 90 ) && ( l < 97 || l > 122 ))
    {
-     printf("Please enter an alphabetic key \n");
+     printf("Please enter an alphabetic key");
      return 1;
    }
  }

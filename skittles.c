@@ -1,6 +1,7 @@
-#include <s://www.google.co.in/tdio.h>
+#include <stdio.h>
 #include <cs50.h>
 #include <stdlib.h>
+#include <time.h>
 
 
 int
