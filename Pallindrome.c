@@ -2,7 +2,12 @@
 #include <cs50.h>
 #include <string.h>
 
-void
+/* Check whether
+ * a string is a
+ * pallindrome
+ */
+
+int
 main()
 {
   printf("Enter the string please: ");

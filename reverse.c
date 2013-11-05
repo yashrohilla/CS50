@@ -2,8 +2,11 @@
 #include <cs50.h>
 #include <string.h>
 
+/* Print the reverse of
+ * a string
+ */
 
-void main()
+int main()
 {
   printf("enter the string: ");
   string p = GetString();

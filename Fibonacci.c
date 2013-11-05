@@ -1,7 +1,13 @@
 #include <stdio.h>
 #include <cs50.h>
 
-void
+/* Write down x number of
+ * numbers in the
+ * fibonacci series
+ */
+
+
+int
 main()
 {
   printf("Enter the number: ");

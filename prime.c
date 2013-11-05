@@ -2,6 +2,10 @@
 #include <stdlib.h>
 #include <time.h>
 
+/* Generate a prime number
+ * using function rand()
+ */
+
 int
 main()
 {
